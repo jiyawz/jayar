@@ -57,7 +57,7 @@
     <main>
       <section class="hero section-pad" id="about">
         <div class="hero-copy reveal"><div class="eyebrow">UI/UX DESIGNER <i></i> PHILIPPINES <i></i> 2026</div><p class="kicker">Hello, I'm Jay-ar.</p><h1>I design thoughtful digital experiences that feel <em>simple, useful, and human.</em></h1><p class="lede">I'm a 4th-year BSIT student at the University of Mindanao, working across frontend development, UI/UX, backend systems, networking, and information security.</p><div class="actions"><a class="button primary" href="#work">View my work <b>&#8599;</b></a><a class="text-link" href="#about-details">About me <b>&#8600;</b></a></div><div class="hero-meta"><span>Based in<strong>Davao City, PH</strong></span><span>Focus<strong>Frontend &middot; UI/UX</strong></span></div></div>
-        <div class="hero-visual reveal"><div class="paper-frame"><div class="frame-top"><span>ARCHIVE / 001</span><span>JMC&mdash;26</span></div><div class="portrait"><div class="sun"></div><div class="grid"></div><div class="initial">J<span>.</span></div><div class="portrait-note">PROFILE<br>IMAGE / PLACEHOLDER</div></div><div class="frame-caption"><span>Jay-ar M. Calalo</span><span>Frontend / UI/UX / Systems</span></div></div></div>
+        <div class="hero-visual reveal"><div class="paper-frame"><div class="frame-top"><span>ARCHIVE / 001</span><span>JMC&mdash;26</span></div><div class="portrait"><img src="images/profile.png" alt="Jay-ar M. Calalo" style="width: 100%; height: 100%; object-fit: cover;"></div><div class="frame-caption"><span>Jay-ar M. Calalo</span><span>Frontend / UI/UX / Systems</span></div></div></div>
       </section>
       <div class="statement"><div class="section-pad statement-inner"><span>BUILD / DESIGN / SECURE</span><b>&#10035;</b><span>RETRO APPEARANCE / MODERN USABILITY</span></div></div>
       <section class="section-pad work" id="work">
@@ -106,6 +106,17 @@
               </div>
             </div>
           </article>
+          <article class="certificate reveal">
+            <div class="cert-icon" style="background:#686861;">&#9881;</div>
+            <div>
+              <small>GITHUB / CERTIFICATE 03</small>
+              <h3>GitHub Certification</h3>
+              <p>GitHub certificate earned.</p>
+              <div class="cert-img-wrap" id="open-cert-3" role="button" tabindex="0" aria-label="View GitHub certificate full size">
+                <img src="images/github.png" alt="GitHub Certificate">
+              </div>
+            </div>
+          </article>
         </div>
       </section>
       <!-- Certificate Lightbox -->
@@ -114,7 +125,7 @@
         <img id="cert-lightbox-img" src="" alt="Certificate full view">
       </div>
       <section class="contact section-pad" id="contact">
-        <div class="contact-card reveal"><div class="contact-content"><span class="label light">&#9679; Have a project in mind?</span><h2>Let's make<br><em>something thoughtful.</em></h2><p>I'm open to internships, collaborations, and junior opportunities where thoughtful design meets solid technology.</p><form id="contact-form"><div><input required aria-label="Your name" placeholder="Your name"><input required type="email" aria-label="Your email" placeholder="Your email"></div><textarea required aria-label="Your message" rows="3" placeholder="Tell me a little about your idea..."></textarea><button class="button butter" type="submit">Send a note &#8599;</button><p id="form-status"></p></form></div><aside>JMC / 2026 <i></i> LET'S CONNECT</aside></div>
+        <div class="contact-card reveal"><div class="contact-content"><span class="label light">&#9679; Have a project in mind?</span><h2>Let's make<br><em>something thoughtful.</em></h2><p>I'm open to internships, collaborations, and junior opportunities where thoughtful design meets solid technology.</p><form id="contact-form" class="contact-form"><div><input required aria-label="Your name" placeholder="Your name"><input required type="email" aria-label="Your email" placeholder="Your email"></div><textarea required aria-label="Your message" rows="3" placeholder="Tell me a little about your idea..."></textarea><button class="button butter" type="submit">Send a note &#8599;</button><p id="form-status"></p></form></div><aside>JMC / 2026 <i></i> LET'S CONNECT</aside></div>
       </section>
     </main>
     <footer class="footer section-pad"><span class="brand-mark">JAY-AR<span>.</span></span><span>Frontend developer &middot; UI/UX &middot; Systems</span><span>&copy; 2026 Jay-ar M. Calalo</span></footer>
@@ -190,6 +201,9 @@
     const cert2 = document.getElementById('open-cert-2');
     cert2.addEventListener('click', () => openLightbox('images/cybercert.png'));
     cert2.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') openLightbox('images/cybercert.png'); });
+    const cert3 = document.getElementById('open-cert-3');
+    cert3.addEventListener('click', () => openLightbox('images/github.png'));
+    cert3.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') openLightbox('images/github.png'); });
     lightboxClose.addEventListener('click', closeLightbox);
     lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
